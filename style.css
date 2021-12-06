@@ -1,0 +1,98 @@
+/* General styling for the HTML */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* removing all pre-style for the un order list */
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* CSS for carousel */
+
+.carousel {
+    /* according to the use but here i using the full height and width */
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    /* by using inset which will set all top & bottom & left and right to Zero */
+    inset: 0;
+    /* set opacity to all images because i want to show only the one with active data attribute */
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+    /* Using transition delay for the removing slide to add opacity effect like fade out but will show the new slide instantly */
+    transition-delay: 200ms;
+}
+
+.slide > img {
+    /* adding display block for images to respect the height and width */
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* central the images by cover all the space and center the image itself */
+    object-fit: cover;
+    object-position: center;
+}
+
+/* CSS style for the active slide only */
+.slide[data-active] {
+    opacity: 1;
+    z-index: 1;
+    transition-delay: 0ms;
+}
+
+/* CSS style for carousel buttons */
+.carousel-btn {
+    position: absolute;
+    z-index: 2;
+    background: none;
+    border: none;
+    font-size: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    border-radius: 0.25rem;
+    padding: 0 .5rem;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* adding the same effect for haver and focus to buttons */
+.carousel-btn:hover,
+.carousel-btn:focus {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* customize the outline that happen when focus on the button */
+.carousel-btn:focus {
+    outline: 1px solid black;
+}
+
+/* moving buttons to the right spot */
+.carousel-btn.prev {
+    left: 1rem;
+}
+
+.carousel-btn.next {
+    right: 1rem;
+}
+
+
+
+/* CSS for carousel */

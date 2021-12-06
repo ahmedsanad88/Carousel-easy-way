@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <title>Carousel</title>
+</head>
+<body>
+    <!-- Adding aria label for accessability purpose -->
+    <section aria-label="Newest images">
+        <!-- container div which will have all the children -->
+        <div class="carousel" data-carousel>
+            <!-- control buttons -->
+            <button class="carousel-btn prev" data-carousel-btn="prev" >&lang;</button>
+            <button class="carousel-btn next" data-carousel-btn="next" >&rang;</button>
+            <!-- Using un order list to contain all images or show request to be used -->
+            <ul data-slides>
+                <li class="slide" data-active>
+                    <img src="./images/carousel1.jpg" alt="tech image 1">
+                </li>
+                <li class="slide">
+                    <img src="./images/carousel2.jpg" alt="tech image 2">
+                </li>
+                <li class="slide">
+                    <img src="./images/carousel3.jpg" alt="tech image 3">
+                </li>
+            </ul>
+        </div> 
+    </section>
+</body>
+</html>
